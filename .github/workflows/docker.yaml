@@ -15,11 +15,13 @@ on:
       - master
       - dev
       - public
+      - main
   push:
     branches:
       - master
       - dev 
       - public
+      - main
     tags: '*'
 
 jobs:
