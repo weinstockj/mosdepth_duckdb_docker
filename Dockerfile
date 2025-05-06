@@ -7,7 +7,8 @@ RUN apt-get update && \
     apt-get install -y \
     curl \
     wget  \
-    unzip 
+    unzip \
+    parallel
 
 RUN wget https://github.com/brentp/mosdepth/releases/download/${MOSDEPTH_VERSION}/mosdepth
 
