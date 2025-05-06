@@ -8,7 +8,8 @@ RUN apt-get update && \
     curl \
     wget  \
     unzip \
-    parallel
+    parallel \
+    curl
 
 RUN wget https://github.com/brentp/mosdepth/releases/download/${MOSDEPTH_VERSION}/mosdepth
 
@@ -20,6 +21,9 @@ RUN curl -L -o duckdb_cli.zip "https://github.com/duckdb/duckdb/releases/downloa
     && rm duckdb_cli.zip
 
 RUN mv duckdb /usr/local/bin/duckdb
+
+RUN apt-get install -y \
+    samtools 
 
 ENV SHELL=/bin/bash
 
